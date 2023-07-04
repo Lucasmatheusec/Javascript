@@ -7,17 +7,20 @@
 </head>
 <body>
     <h1>Sistema de imigração brasileira</h1>
-    <p>Onde você nasceu? <input type="text" id="txtorigem"></p>
+    <p>Onde você nasceu? <input type="text" name="txt" id="txt"></p>
     <input type="button" value="Verificar" onclick="calcular()">
     <div id="res"></div>
     <script>
-        var país = 'EUA'
-            console.log(`Vivendo em ${país}`)
-        if (país == 'Brasil'){
-            console.log('Você é Brasileiro!')
+        function calcular() {
+        var pais = document.querySelector('input#txt')
+        var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Vivendo em ${pais}</p>`
+        /*if (país == 'Brasil'){
+            res.innerHTML += '<p>Você é Brasileiro!</p>'
         }else {
-            console.log('Você é Estrangeiro')
-        }
+            res.innerHTML += '<p>Você é Estrangeiro</p>'
+        }*/
+    }
     </script>
 </body>
 </html>
