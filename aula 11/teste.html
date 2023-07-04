@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é estrangeiro?</title>
+</head>
+<body>
+    <h1>Sistema de imigração brasileira</h1>
+    <p>Onde você nasceu? <input type="text" id="txtorigem"></p>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        var país = 'EUA'
+            console.log(`Vivendo em ${país}`)
+        if (país == 'Brasil'){
+            console.log('Você é Brasileiro!')
+        }else {
+            console.log('Você é Estrangeiro')
+        }
+    </script>
+</body>
+</html>
