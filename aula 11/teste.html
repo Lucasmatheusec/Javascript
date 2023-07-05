@@ -7,19 +7,20 @@
 </head>
 <body>
     <h1>Sistema de imigração brasileira</h1>
-    <p>Onde você nasceu? <input type="text" name="txt" id="txt"></p>
-    <input type="button" value="Verificar" onclick="calcular()">
-    <div id="res"></div>
+    <p>Onde você nasceu? <input type="text" name="txtpais" id="txtpais"></p>
+    <input type="button" value="Verificar" onclick= "calcular()">
+    <div id="res">
     <script>
         function calcular() {
-        var pais = document.querySelector('input#txt')
+        var pais = document.querySelector("input#txtpais")
         var res = document.querySelector('div#res')
-            res.innerHTML = `<p>Vivendo em ${pais}</p>`
-        /*if (país == 'Brasil'){
-            res.innerHTML += '<p>Você é Brasileiro!</p>'
+        var pais = String(txtpais.value)//Professor falou que não precisava converter, mas só funcionou convertendo, ver isso.
+            res.innerHTML = `<p>Se você nasceu em ${pais}</p>`
+        if (pais == 'Brasil'){
+            res.innerHTML += `<p>Então você é Brasileiro!</p>`
         }else {
-            res.innerHTML += '<p>Você é Estrangeiro</p>'
-        }*/
+            res.innerHTML += `<p>Então você é Estrangeiro</p>`
+        }
     }
     </script>
 </body>
